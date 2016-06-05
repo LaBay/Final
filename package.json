@@ -14,5 +14,8 @@
     "js"
   ],
   "author": "LaBay",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
