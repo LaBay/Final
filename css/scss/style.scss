@@ -1,3 +1,34 @@
+/*
+
+320
+
+768
+
+1440
+
+*/
+
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1440px;
+
+/*@mixin media_size{
+
+	@media screen and (min-width: $desktop){
+		min-width: $desktop;
+	};
+
+	@media screen and (max-width: $tablet){
+		min-width: $tablet;
+		max-width: ($desktop - 1);
+	};
+
+	@media screen and (max-width: ($tablet - 1)){
+		min-width: $mobile;
+		max-width: ($tablet - 1);
+	};
+
+}*/
 
 @mixin font-Roboto{
 	font-family: 'Roboto', sans-serif;
@@ -11,7 +42,7 @@
 
 @mixin search_input{
 	display: block;
-	width: 270px;
+	width: 277px;
 	line-height: 40px;
 	@include font-Roboto;
 	font-size: 14px;
@@ -29,18 +60,19 @@
 
 body{
 	height: 3905px;
+	min-width: 320px;
 }
 
 .wrapper{
 	margin: 0 auto;
 	padding-top: 20px;
-	min-width: 320px;
+	width: 320px;
 }
 
 	/* HEADER */
 
 .header{
-	width: 320px;
+	min-width: 320px;
 	height: 540px;
 	background: url(../background/background1.png) top center no-repeat;
 	background-size: cover;
@@ -73,6 +105,10 @@ body{
 .header__content{
 	padding: 113px 0 0 0;
 	text-align: center;
+}
+
+.header__content__item{
+	margin: 0 auto;
 }
 
 .header__content__item--1{
@@ -114,14 +150,13 @@ body{
 	/* SECTION "STEPS" */
 
 .step-section{
-	width: 320px;
+	width: auto;
 	height: 820px;
 	padding: 12px 10px 0 0; 
 }
 
 .section__header{
 	margin: 0 0 10px 0;
-	//width: 100%;
 	@include font-Montserrat-bold;
 	color: #333333;
 	font-size: 22px;
@@ -131,7 +166,7 @@ body{
 .step-section__content__item{
 	position: relative;
 	height: 240px;
-	margin: 0 0 10px 10px;
+	margin: 15px 0 10px 10px;
 	color: #ffffff;
 		h3{
 			position: absolute;
@@ -186,21 +221,23 @@ body{
 	background: url(../background/step3_bg.jpg) no-repeat;
 }
 
+
+
 .partners-section{
 	font-size: 13.97px;
 	text-align: center;
-	width: 320px;
-
+	min-width: 320px;
 }
 
 .partners-section__content__item{
 		text-align: center;
+		list-style-type: none;
 	.partner-photo{
 		position: relative;
 		display: inline-block;
 		width: 120px;
 		height: 120px;
-		margin: 0 0 20px 0; 
+		margin: 0 0 17px 0; 
 		border-radius: 100%;
 		cursor: pointer;
 	}
@@ -219,7 +256,6 @@ body{
 }
 .partners-section__content__item--1{
 	.partner-photo{
-		//margin: 20px 0 0 0; 
 		background: url(../background/photo_partner_1.jpg);
 	}
 
@@ -268,7 +304,6 @@ body{
 	margin: 0 0 20px 0; 
 	@include font-Montserrat-bold;
 	color: #333333;
-	//width: 220px;
 	text-align: center;
 	cursor: pointer;
 }
@@ -294,18 +329,27 @@ body{
 	border: 2px solid #ff4e50;
 	border-radius: 20px;
 	padding: 0 73px 0 73px;
-	margin: 30px 0 0 0px;
+	margin: -3px 0 0 0px;
 }
 
 
 	/* IDEA SECTION  */
 
+.idea-section{
+	margin: 13px 0 0 0;
+}
+
+.idea-section{
+	ul{
+		margin: 0 0 33px 0; 
+	}
+}
+
 .idea-section__content__item{	
 	width: 300px;
 	height: 120px;
-	margin: 10px;
+	margin: 11px;
 	border-radius: 10px;
-	//border: 1px solid green;
 	text-align: center;
 	overflow: hidden;
 		span{
@@ -344,7 +388,7 @@ body{
 }
 
 .idea-section-search-header{
-	margin: 20px 20px 0 20px;
+	margin: 0px 20px 0 20px;
 	@include font-Roboto;
 	font-size: 17.95px;
 	font-weight: 200;
@@ -352,7 +396,7 @@ body{
 }
 
 #interests-search_field{
-	margin: 20px 20px 0 20px;
+	margin: 14px 20px 0 20px;
 	text-indent: 15px;
 	@include search_input;
 	color: #999999;
@@ -362,7 +406,7 @@ body{
 }
 
 #interests-search_btn{
-	margin: 20px 20px 40px 20px;
+	margin: 9px 20px 40px 20px;
 	@include search_input;
 	background-color: #ff4e50;
 	border: none;
@@ -378,7 +422,7 @@ body{
 	border-top: 4px solid #ff4e50;
 }
 .footer-section__header{
-			margin: 20px 0 0 0; 
+			margin: -5px 0 0 0; 
 			text-align: center;
 			color: #ff4e50;
 			@include font-Montserrat-bold;
@@ -397,7 +441,7 @@ body{
 
 .footer-section__item--1,
 .footer-section__item--6{
-	margin: 20px 0 10px 0; 
+	margin: 10px 0 10px 0; 
 	@include font-Montserrat-bold;
 	color: #333333;
 	font-size: 14px;
@@ -432,3 +476,10 @@ body{
 			text-decoration: none;
 		}
 }
+
+	/* @media */
+
+@media screen and (max-width: $tablet){
+	min-width: $tablet;
+	max-width: ($desktop - 1);
+};
