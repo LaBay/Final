@@ -171,6 +171,8 @@ body{
 	height: 240px;
 	margin: 15px 0 10px 10px;
 	color: #ffffff;
+	background-position: no-repeat;
+	//z-index: 1;
 		h3{
 			position: absolute;
 			left: 20px;
@@ -186,6 +188,7 @@ body{
 			font-weight: 100;
 			text-align: center;
 			letter-spacing: 2px;
+			//z-index: 10;
 		}
 		h2{
 			position: absolute;
@@ -193,6 +196,7 @@ body{
 			bottom: 80px;
 			@include font-Montserrat-bold;
 			font-weight: 24px;
+			//z-index: 10;
 		}
 		p{
 			position: absolute;
@@ -202,16 +206,41 @@ body{
 			font-weight: 100;
 			font-size: 14px;
 			line-height: 14px;
+			//z-index: 10;
 
 		}
 }
 
+.left_btn,
+.right_btn{
+	position: absolute;
+	display: none;
+	width: 30px;
+	height: 55px;
+	background: transparent;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+
+.left_btn{
+	left: 20px;
+	background: url(../background/l_arrow.png) center no-repeat;
+
+}
+
+.right_btn{
+	right: 20px;
+	background: url(../background/r_arrow.png) center no-repeat;
+}
+
 .step-section__content__item--1{
-	background: url(../background/step1_bg.jpg) no-repeat;
+	background: url(../background/step0_bg_m.jpg);
+
 }
 
 .step-section__content__item--2{
-	background: url(../background/step2_bg.jpg) no-repeat;
+	background: url(../background/step1_bg_m.jpg);
 		h3{
 			bottom: 120px;
 		}
@@ -221,7 +250,7 @@ body{
 }
 
 .step-section__content__item--3{
-	background: url(../background/step3_bg.jpg) no-repeat;
+	background: url(../background/step2_bg_m.jpg);
 }
 
 
@@ -533,36 +562,47 @@ body{
 	//border: 1px solid red;
 		.wrapper__step-section{
 			height: auto;
-}
+		}
 }
 
 
 
 .step-section__content{
-	margin: 31px auto;
-	//width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	//padding: auto;
 	//text-align: center;
 	//border: 1px solid green;
 }
 
 .step-section__content__item{
+	position: relative;
 	display: inline-block;
 	width: 235px;
 	height: 400px;
 	margin: 0 9px 0 9px;
 }
 
+.left_btn,
+.right_btn{
+	display: block;
+	top: 40px;
+}
+
+
+
+
 
 .step-section__content__item--1{
-	background: url(../background/step1_bg_t.jpg) no-repeat;
+	background: url(../background/step0_bg_t.jpg);
 }
 
 .step-section__content__item--2{
-	background: url(../background/step2_bg_t.jpg) no-repeat;
+	background: url(../background/step1_bg_t.jpg);
 }
 
 .step-section__content__item--3{
-	background: url(../background/step3_bg_t.jpg) no-repeat;
+	background: url(../background/step2_bg_t.jpg);
 }
 
 .partners-section{
@@ -574,16 +614,21 @@ body{
 	height: 480px;
 	width: 540px;
 	margin: 0 auto;
+
 }
 
 .partners-section__content__item{
 	float: left;
+	//display: inline-block;
+	margin-top: auto;
 	margin: 20px 0 -25px 35px;
 }
 
 .partner-section__link{
+	text-align: center;
+	clear: both;
 	margin: 67px 0 0 0;
-	padding: 0 28px 0 28px;
+	//padding: 0 28px 0 28px;
 }
 
 .idea-section{
@@ -617,32 +662,6 @@ body{
 	text-align: left;
 }
 
-
-/*
-.footer-section__item--2{
-	position: absolute;
-	left: 265px;
-
-}
-
-.footer-section__item--3{
-	position: absolute;
-	left: 265px;
-
-}
-
-.footer-section__item--4{
-	position: absolute;
-	left: 265px;
-
-}
-
-.footer-section__item--5{
-	position: absolute;
-	left: 265px;
-
-}*/
-
 .footer-section__item--6{
 	position: absolute;
 	left: 173px;
@@ -657,4 +676,85 @@ body{
 
 }
 
-};
+}
+
+@media screen and (min-width: ($desktop)){
+
+/*.header{
+	background: url(../background/header_tablet_bg.jpg) top center no-repeat;
+	background-size: cover;
+
+}*/
+
+.wrapper{
+	position: relative;
+	min-width: $desktop;
+	//border: 1px solid blue;
+	
+}
+
+.header__content__item--1{
+	left: 250px;
+	top: 50px;
+}
+
+.header__link{
+	right: 250px;
+}
+
+.step-section__content__item{
+	width: 300px;
+	height: 400px;
+}
+
+.left_btn,
+.right_btn{
+	display: block;
+	top: 150px;
+}
+
+.step-section__content__item--1{
+	background: url(../background/step0_bg_d.jpg) no-repeat;
+}
+
+.step-section__content__item--2{
+	background: url(../background/step1_bg_d.jpg) no-repeat;
+}
+
+.step-section__content__item--3{
+	background: url(../background/step2_bg_d.jpg) no-repeat;
+}
+
+
+
+.partners-section__content{
+	width: 1060px;
+	height: 270px;
+	//border: 1px solid red;
+	text-align: center;
+	//vertical-align: 
+
+}
+
+.partners-section__content__item{
+	height: 100%;
+	//margin-top: 0 auto;
+	//border: 1px solid green;
+	margin-bottom: 0px;
+}
+
+
+.partner-section__link{
+	//padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+}
