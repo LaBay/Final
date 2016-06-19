@@ -169,9 +169,10 @@ body{
 .step-section__content__item{
 	position: relative;
 	height: 240px;
+	width: 300px;
 	margin: 15px 0 10px 10px;
 	color: #ffffff;
-	background-position: center no-repeat;
+	background-position: no-repeat;
 	//z-index: 1;
 		h3{
 			position: absolute;
@@ -235,12 +236,12 @@ body{
 }
 
 .step-section__content__item--1{
-	background: url(../background/step0_bg_t.jpg);
+	background: url(../background/step0_bg_m.jpg);
 
 }
 
 .step-section__content__item--2{
-	background: url(../background/step1_bg_t.jpg);
+	background: url(../background/step1_bg_m.jpg);
 		h3{
 			bottom: 120px;
 		}
@@ -250,7 +251,8 @@ body{
 }
 
 .step-section__content__item--3{
-	background: url(../background/step2_bg_t.jpg);
+	background: url(../background/step2_bg_m.jpg);
+}
 
 
 
@@ -580,6 +582,7 @@ body{
 	width: 235px;
 	height: 400px;
 	margin: 0 9px 0 9px;
+
 }
 
 .left_btn,
@@ -594,6 +597,7 @@ body{
 
 .step-section__content__item--1{
 	background: url(../background/step0_bg_t.jpg);
+	
 }
 
 .step-section__content__item--2{

@@ -111,6 +111,7 @@
   .step-section__content__item {
     position: relative;
     height: 240px;
+    width: 300px;
     margin: 15px 0 10px 10px;
     color: #ffffff;
     background-position: no-repeat; }
@@ -161,7 +162,7 @@
     right: 20px;
     background: url(../background/r_arrow.png) center no-repeat; }
   .step-section__content__item--1 {
-    background: url(../background/step0_bg_t.jpg); }
+    background: url(../background/step0_bg_m.jpg); }
   .step-section__content__item--2 {
     background: url(../background/step1_bg_m.jpg); }
     .step-section__content__item--2 h3 {
