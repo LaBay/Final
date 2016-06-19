@@ -171,7 +171,7 @@ body{
 	height: 240px;
 	margin: 15px 0 10px 10px;
 	color: #ffffff;
-	background-position: no-repeat;
+	background-position: center no-repeat;
 	//z-index: 1;
 		h3{
 			position: absolute;
@@ -235,12 +235,12 @@ body{
 }
 
 .step-section__content__item--1{
-	background: url(../background/step0_bg_m.jpg);
+	background: url(../background/step0_bg_t.jpg);
 
 }
 
 .step-section__content__item--2{
-	background: url(../background/step1_bg_m.jpg);
+	background: url(../background/step1_bg_t.jpg);
 		h3{
 			bottom: 120px;
 		}
@@ -250,8 +250,7 @@ body{
 }
 
 .step-section__content__item--3{
-	background: url(../background/step2_bg_m.jpg);
-}
+	background: url(../background/step2_bg_t.jpg);
 
 
 
