@@ -52,3 +52,53 @@ $('#step-section__content__item--3--right').on('click', function(){
 	count(n3);
 	change($(this));
 });
+
+
+	
+
+
+$(function(){
+
+var BEMclass = 'idea-section__content__item';
+var newElemets = '';
+var quantity = 7;
+var BEMselector = 1;
+var $queryBlock = $('#queryBlock');
+var queries = ['Sports and Activity', 'Welness and Health', 'Extreme Sports and Expeditions', 'Games', 'Culture and Education', 'Relaxation', 'Travelling'];
+	function create(){
+		$queryBlock.html('');
+
+		function fat(){
+			if ((BEMselector == 5) || (BEMselector == 6))	return ' fat';
+			else return '';
+		};
+
+		while(BEMselector <= quantity){
+				let str = '<li class="' + BEMclass + ' ' + BEMclass + '--' 
+				+ BEMselector + fat() + '">' + '</li> ';
+				BEMselector++;
+				newElemets += str;
+		};
+
+		$queryBlock.html(newElemets);
+
+
+	}create();
+
+		var $block = $('.' + BEMclass);
+		var $word = $('.' + BEMclass + ' span');
+		//console.log($block)
+		console.log($word)
+
+		for (let i = 0; i < $block.length; i++){
+			$.getJSON('http://api.pixplorer.co.uk/image?word=' + queries[i] + '&amount=1&?size=medium', function(r){
+				console.log(r)
+				//let str = ;
+				//console.log(str);
+				$block.eq(i).css('background-image', 'url(' +r.images[0].imageurl+ ')')
+							.html('<span>' + r.images[0].word + '</span>')
+
+			})
+		}
+	
+})
