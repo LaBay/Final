@@ -76,6 +76,7 @@ body{
 .header__link__item{
 	list-style-type: none;
 	display: inline-block;
+	transition: 0.7s;
 		a{
 		@include font-Montserrat-bold;
 		color: inherit;
@@ -92,6 +93,15 @@ body{
 	margin: 0 0 0 17px;
 }
 
+.header__link__item:hover{
+	color: #ff4e50;
+}
+
+.header__link__item--2:hover{
+	background-color: white;
+	border-color: #ff4e50;
+}
+
 .header__content{
 	padding: 113px 0 0 0;
 	text-align: center;
@@ -100,6 +110,12 @@ body{
 
 .header__content__item{
 	margin: 0 auto;
+	transition: 0.7s;
+}
+
+.header__content__item:hover{
+	color: #ff4e50;
+	text-shadow: 0px 0px 5px white;
 }
 
 .header__content__item--1{
@@ -123,6 +139,10 @@ body{
 	margin: 0 auto;
 }
 
+.header__content__item--3:hover{
+	
+}
+
 .header__content__item--4{
 	line-height: 40px;
 	width: 280px;
@@ -135,6 +155,11 @@ body{
 			text-decoration: none;
 			font-size: 14px;
 		}
+}
+
+.header__content__item--4:hover{
+	background-color: white;
+
 }
 
 	/* SECTION "STEPS" */
@@ -159,7 +184,8 @@ body{
 	width: 300px;
 	margin: 15px 0 10px 10px;
 	color: #ffffff;
-	background-position: no-repeat;
+	//background-position: no-repeat;
+	transition: 0.5s;
 		h3{
 			position: absolute;
 			left: 20px;
@@ -175,13 +201,14 @@ body{
 			font-weight: 100;
 			text-align: center;
 			letter-spacing: 2px;
+			transition: 0.7s;
 		}
 		h2{
 			position: absolute;
 			left: 20px;
 			bottom: 80px;
 			@include font-Montserrat-bold;
-			font-weight: 24px;
+			font-size: 24px;
 		}
 		p{
 			position: absolute;
@@ -192,6 +219,13 @@ body{
 			font-size: 14px;
 			line-height: 14px;
 		}
+}
+
+.step-section__content__item:hover{
+	h3{
+		background-color: #ffffff;
+		color: #ff4e50;
+	}
 }
 
 .left_btn,
@@ -234,6 +268,8 @@ body{
 	background: url(../background/step2_bg_m.jpg);
 }
 
+
+
 .partners-section{
 	font-size: 13.97px;
 	text-align: center;
@@ -262,6 +298,14 @@ body{
 		border: 4px solid white;
 		border-radius: 100%;
 		background: url(../background/interest_sprite.png) no-repeat;
+		transition: 0.5s;
+	}
+}
+
+.partners-section__content__item:hover{
+	.interest-logo{
+		left: 80px;
+		top: 80px;
 	}
 }
 
@@ -341,6 +385,12 @@ body{
 	border-radius: 20px;
 	padding: 0 73px 0 73px;
 	margin: -3px 0 0 0px;
+	transition: 0.7s;
+}
+
+.partner-section__link:hover{
+	color: white;
+	background-color: #ff4e50;
 }
 
 
@@ -361,8 +411,9 @@ body{
 	border-radius: 10px;
 	text-align: center;
 	overflow: hidden;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	//background-repeat: no-repeat;
 	list-style-type: none;
 		span{
 			@include font-Montserrat-bold;
@@ -371,6 +422,7 @@ body{
 			text-shadow: 0px 0px 3px black;
 		}
 }
+
 
 /*.idea-section__content__item--1{
 	background: url(../background/idea_bg_1.jpg) no-repeat;
@@ -400,8 +452,13 @@ body{
 	background: url(../background/idea_bg_7.jpg) no-repeat;
 }*/
 
+.idea-section__search{
+	margin: 0 auto;
+	text-align: center;
+}
+
 .idea-section-search-header{
-	//text-align: center;
+	text-align: center;
 	margin: 0 auto;
 	@include font-Roboto;
 	font-size: 17.95px;
@@ -410,14 +467,18 @@ body{
 }
 
 #interests-search_field{
-	text-align: center;
+	//text-align: center;
 	margin: 14px 20px 0 20px;
 	text-indent: 15px;
 	@include search_input;
 	color: #999999;
 	border: 1px solid #999999;
 	border-radius: 3px;
-		
+	transition: 0.5s;
+}
+
+#interests-search_field:focus{
+	border-color: #ff4e50;
 }
 
 #interests-search_btn{
@@ -428,6 +489,11 @@ body{
 	border-radius: 20px;
 	color: white;
 	cursor: pointer;
+	transition: 0.5s;
+}
+
+#interests-search_btn:hover{
+	letter-spacing: 0.15em;
 }
 
 	/* FOOTER */
@@ -582,7 +648,7 @@ body{
 }
 
 .partners-section{
-	margin: 74px auto -10px auto;
+	margin: 74px auto -262px auto;
 }
 
 
@@ -608,6 +674,10 @@ body{
 	height: 1404px;
 }
 
+.idea-section__content__item span{
+	font-size: 22px;
+}
+
 .idea-section .section__header{
 	clear: both;
 }
@@ -628,6 +698,17 @@ body{
 .idea-section__content__item.fat{
 	//height: 310px;
 	width: 492px;
+}
+
+#interests-search_field{
+	display: inline-block;
+	width: 240px;
+	
+}
+
+#interests-search_btn{
+	display: inline-block;
+	width: 160px;
 }
 
 .footer-section__wrapper{
@@ -685,6 +766,10 @@ body{
 	right: 250px;
 }
 
+.step-section .section__header{
+	margin: 0 0 34px 0;
+}
+
 .step-section__content__item{
 	width: 300px;
 	height: 400px;
@@ -720,7 +805,7 @@ body{
 }
 
 .partner-section__link{
-
+	margin: 6px 0 0 0;
 }
 
 
@@ -735,16 +820,33 @@ body{
 	width: 620px;
 }
 
+
+
+.section__header--second{
+	margin: 101px 0 34px 0;
+}
+
 #queryBlock{
 	width: 980px;
 	height: 985px;
 }
 
 
+#interests-search_field,
+#interests-search_btn{
+    margin: 34px 0 0 0;
+}
 
+.footer-section__header {
+    margin: -5px 0 0 215px;
+ }
 
+.footer-section__item__content {
+    left: 489px;
+}
 
-
-
+.copyright {
+    left: 1079px;
+}
 
 }

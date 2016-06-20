@@ -39,7 +39,8 @@
     margin: 0 0 0 80px; }
   .header__link__item {
     list-style-type: none;
-    display: inline-block; }
+    display: inline-block;
+    transition: 0.7s; }
     .header__link__item a {
       font-family: 'Montserrat', sans-serif;
       font-weight: bold;
@@ -52,12 +53,21 @@
     border-radius: 20px;
     padding: 0 17px 0 17px;
     margin: 0 0 0 17px; }
+  .header__link__item:hover {
+    color: #ff4e50; }
+  .header__link__item--2:hover {
+    background-color: white;
+    border-color: #ff4e50; }
   .header__content {
     padding: 113px 0 0 0;
     text-align: center;
     height: auto; }
   .header__content__item {
-    margin: 0 auto; }
+    margin: 0 auto;
+    transition: 0.7s; }
+  .header__content__item:hover {
+    color: #ff4e50;
+    text-shadow: 0px 0px 5px white; }
   .header__content__item--1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -87,6 +97,8 @@
       color: inherit;
       text-decoration: none;
       font-size: 14px; }
+  .header__content__item--4:hover {
+    background-color: white; }
   /* SECTION "STEPS" */
   .step-section {
     width: auto;
@@ -105,7 +117,7 @@
     width: 300px;
     margin: 15px 0 10px 10px;
     color: #ffffff;
-    background-position: no-repeat; }
+    transition: 0.5s; }
     .step-section__content__item h3 {
       position: absolute;
       left: 20px;
@@ -120,14 +132,15 @@
       text-transform: uppercase;
       font-weight: 100;
       text-align: center;
-      letter-spacing: 2px; }
+      letter-spacing: 2px;
+      transition: 0.7s; }
     .step-section__content__item h2 {
       position: absolute;
       left: 20px;
       bottom: 80px;
       font-family: 'Montserrat', sans-serif;
       font-weight: bold;
-      font-weight: 24px; }
+      font-size: 24px; }
     .step-section__content__item p {
       position: absolute;
       left: 20px;
@@ -136,6 +149,9 @@
       font-weight: 100;
       font-size: 14px;
       line-height: 14px; }
+  .step-section__content__item:hover h3 {
+    background-color: #ffffff;
+    color: #ff4e50; }
   .left_btn,
   .right_btn {
     position: absolute;
@@ -185,7 +201,11 @@
       top: 86px;
       border: 4px solid white;
       border-radius: 100%;
-      background: url(../background/interest_sprite.png) no-repeat; }
+      background: url(../background/interest_sprite.png) no-repeat;
+      transition: 0.5s; }
+  .partners-section__content__item:hover .interest-logo {
+    left: 80px;
+    top: 80px; }
   .partners-section__content__item--1 .partner-photo {
     background: url(../background/photo_partner_1.jpg); }
   .partners-section__content__item--1 .interest-logo {
@@ -233,7 +253,11 @@
     border: 2px solid #ff4e50;
     border-radius: 20px;
     padding: 0 73px 0 73px;
-    margin: -3px 0 0 0px; }
+    margin: -3px 0 0 0px;
+    transition: 0.7s; }
+  .partner-section__link:hover {
+    color: white;
+    background-color: #ff4e50; }
   /* IDEA SECTION  */
   .idea-section {
     margin: 13px 0 0 0; }
@@ -246,8 +270,8 @@
     border-radius: 10px;
     text-align: center;
     overflow: hidden;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
     list-style-type: none; }
     .idea-section__content__item span {
       font-family: 'Montserrat', sans-serif;
@@ -282,14 +306,17 @@
 .idea-section__content__item--7{
 	background: url(../background/idea_bg_7.jpg) no-repeat;
 }*/
+  .idea-section__search {
+    margin: 0 auto;
+    text-align: center; }
   .idea-section-search-header {
+    text-align: center;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     font-size: 17.95px;
     font-weight: 200;
     color: #333333; }
   #interests-search_field {
-    text-align: center;
     margin: 14px 20px 0 20px;
     text-indent: 15px;
     display: block;
@@ -300,7 +327,10 @@
     outline: none;
     color: #999999;
     border: 1px solid #999999;
-    border-radius: 3px; }
+    border-radius: 3px;
+    transition: 0.5s; }
+  #interests-search_field:focus {
+    border-color: #ff4e50; }
   #interests-search_btn {
     margin: 9px 20px 40px 20px;
     display: block;
@@ -313,7 +343,10 @@
     border: none;
     border-radius: 20px;
     color: white;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: 0.5s; }
+  #interests-search_btn:hover {
+    letter-spacing: 0.15em; }
   /* FOOTER */
   .footer-section {
     width: 100%;
@@ -416,7 +449,7 @@
   .step-section__content__item--3 {
     background: url(../background/step2_bg_t.jpg); }
   .partners-section {
-    margin: 74px auto -10px auto; }
+    margin: 74px auto -262px auto; }
   .partners-section__content {
     height: 480px;
     width: 540px;
@@ -431,6 +464,8 @@
     margin: 67px 0 0 0; }
   .idea-section {
     height: 1404px; }
+  .idea-section__content__item span {
+    font-size: 22px; }
   .idea-section .section__header {
     clear: both; }
   #queryBlock {
@@ -444,6 +479,12 @@
     line-height: 310px; }
   .idea-section__content__item.fat {
     width: 492px; }
+  #interests-search_field {
+    display: inline-block;
+    width: 240px; }
+  #interests-search_btn {
+    display: inline-block;
+    width: 160px; }
   .footer-section__wrapper {
     position: relative; }
   .footer-section__header {
@@ -477,6 +518,8 @@
     top: 50px; }
   .header__link {
     right: 250px; }
+  .step-section .section__header {
+    margin: 0 0 34px 0; }
   .step-section__content__item {
     width: 300px;
     height: 400px; }
@@ -497,11 +540,24 @@
   .partners-section__content__item {
     height: 100%;
     margin-bottom: 0px; }
+  .partner-section__link {
+    margin: 6px 0 0 0; }
   .idea-section__content__item {
     width: 300px;
     line-height: 300px; }
   .idea-section__content__item.fat {
     width: 620px; }
+  .section__header--second {
+    margin: 101px 0 34px 0; }
   #queryBlock {
     width: 980px;
-    height: 985px; } }
+    height: 985px; }
+  #interests-search_field,
+  #interests-search_btn {
+    margin: 34px 0 0 0; }
+  .footer-section__header {
+    margin: -5px 0 0 215px; }
+  .footer-section__item__content {
+    left: 489px; }
+  .copyright {
+    left: 1079px; } }
