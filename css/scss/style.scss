@@ -438,6 +438,7 @@ body{
 	background-position: center center;
 	//background-repeat: no-repeat;
 	list-style-type: none;
+	transition: 0.7s;
 		span{
 			@include font-Montserrat-bold;
 			line-height: 120px;
@@ -487,6 +488,13 @@ body{
 	font-size: 17.95px;
 	font-weight: 200;
 	color: #333333;
+}
+
+#queryBlock{
+	transition: 0.7s;
+	*{
+		transition: 0.7s;
+	}
 }
 
 #interests-search_field{
