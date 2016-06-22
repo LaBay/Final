@@ -60,12 +60,12 @@ $('#step-section__content__item--3--right').on('click', function(){
 
 $(function(){
 
-const quantity = 6;
+const quantity = 7;
 const BEMclass = 'idea-section__content__item';
 var newElemets = '';
 var BEMselector = 1;
 var $queryBlock = $('#queryBlock');
-var fatItem1, fatItem2, fatItem3;
+var fatItem1, fatItem2;
 var queries = ['Sports and Activity', 'Welness and Health', 'Extreme Sports and Expeditions', 'Games', 'Culture and Education', 'Relaxation', 'Travelling'];
 
 
@@ -73,7 +73,7 @@ var queries = ['Sports and Activity', 'Welness and Health', 'Extreme Sports and 
 		
 		$queryBlock.html('');
 
-		/*function fatalizator(fat){
+		function fatalizator(fat){
 		
 				if (fat < 0.08){
 					fatItem1 = 1;
@@ -126,20 +126,20 @@ var queries = ['Sports and Activity', 'Welness and Health', 'Extreme Sports and 
 					fatItem2 = 7;
 				};
 
-		}fatalizator(Math.random());*/
+		}fatalizator(Math.random());
 
 
-		/*function fatInsert(){
+		function fatInsert(){
 			if ((BEMselector == fatItem1) || (BEMselector == fatItem2))	return ' fat';
 			else return '';
-		};*/
+		};
 
 		while(BEMselector <= quantity){
 				let str = '<li class="' + BEMclass + ' ' + BEMclass + '--' 
-				+ BEMselector + '">' + '</li> ';
+				+ BEMselector + fatInsert() + '">' + '</li> ';
 				BEMselector++;
 				newElemets += str;
-		}; //fatInsert() + 
+		};
 
 	$queryBlock.html(newElemets);
 
@@ -148,46 +148,12 @@ var queries = ['Sports and Activity', 'Welness and Health', 'Extreme Sports and 
 
 	var $block = $('.' + BEMclass);	
 
-	function fatalizer(){
-		let i = Math.random();
-		let k = Math.random();
-		let j = Math.random();
+	function getImage(el, i){
 
-			if (i < 0.6){
-				fatItem1 = 0;
-			}else{
-				fatItem1 = 1;
-			};
-
-			if (k < 0.5){
-				fatItem2 = 2;
-			}else{
-				fatItem2 = 3;
-			};
-			
-			if (j < 0.4){
-				fatItem3 = 4;
-			}else{
-				fatItem3 = 5;
-			};
-
-			for (let i = 0; i < $block.length; i++) $block.eq(i).removeClass('fat');
-			
-			$block.eq(fatItem1).addClass('fat');
-			$block.eq(fatItem2).addClass('fat');
-			$block.eq(fatItem3).addClass('fat');
-			
-	}fatalizer();
-
-
-	function getImage(el, i){ // yellow+flowers
-
-		$.getJSON('https://pixabay.com/api/?key=2799655-a46e55bb99fc16063276b4cfb&q=' + el + '&image_type=photo', function(r){
-				//console.log(r)
-				let j = (r.hits.length * Math.random()) >> 0;
-				console.log('r.hits.length=', r.hits.length,'j=', j);
-				$block.eq(i).css('background-image', 'url(' +r.hits[j].webformatURL + ')')
-							.html('<span>' + r.hits[j].tags + '</span>')
+		$.getJSON('http://api.pixplorer.co.uk/image?word=' + el + '&amount=1&?size=l(large)', function(r){
+				console.log(r)
+				$block.eq(i).css('background-image', 'url(' +r.images[0].imageurl+ ')')
+							.html('<span>' + r.images[0].word + '</span>')
 		});
 	};
 
@@ -212,7 +178,6 @@ var queries = ['Sports and Activity', 'Welness and Health', 'Extreme Sports and 
 
 	$('#interests-search_btn').on('click', function(){
 		let value = $('#interests-search_field').val();
-		fatalizer();
 		search(value);
 	});
 
