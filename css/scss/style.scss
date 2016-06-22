@@ -662,14 +662,57 @@ body{
 
 .step-section__content__item--1{
 	background: url(../background/step0_bg_t.jpg);
+	h3{
+		left: 20px;
+    	bottom: 166px;
+	}
+	h2{
+		text-align: left;
+		left: 18px;
+    	bottom: 93px;
+	}
+	p{
+		text-align: left;
+		bottom: 15px;
+		line-height: 17px;
+	}
+
 }
 
 .step-section__content__item--2{
 	background: url(../background/step1_bg_t.jpg);
+	h3{
+		left: 19px;
+    	bottom: 119px;
+	}
+	h2{
+		text-align: left;
+		left: 17px;
+    	bottom: 75px;
+	}
+	p{
+		text-align: left;
+		bottom: 16px;
+		line-height: 12px;
+	}
 }
 
 .step-section__content__item--3{
 	background: url(../background/step2_bg_t.jpg);
+	h3{
+		left: 20px;
+    	bottom: 166px;
+	}
+	h2{
+		text-align: left;
+		left: 17px;
+    	bottom: 93px;
+	}
+	p{
+		text-align: left;
+		bottom: 14px;
+		line-height: 17px;
+	}
 }
 
 .partners-section{
@@ -713,7 +756,10 @@ body{
 	clear: both;
 	width: 790px;
 	height: 980px;
-	margin: -10px 0 96px 0;
+
+	padding: -10px 0 96px 0;
+	margin: -10px auto;
+	//text-align: center;
 }
 
 .idea-section__content__item{
@@ -728,8 +774,12 @@ body{
 	width: 492px;
 }
 
+.section__header--second{
+	margin: 107px 0	0 0;
+}
+
 .idea-section-search-header {
-	margin: 23px auto;
+	margin: 27px auto;
 }
 
 #interests-search_field{
@@ -746,7 +796,7 @@ body{
 }
 
 .footer-section{
-	margin: -3px 0 0 0;
+	margin: -2px 0 0 0;
 }
 
 .footer-section__wrapper{
@@ -821,14 +871,58 @@ body{
 
 .step-section__content__item--1{
 	background: url(../background/step0_bg_d.jpg) no-repeat;
+	h3{
+		left: 22px;
+    	bottom: 152px;
+	}
+	h2{
+		text-align: left;
+	}
+	p{
+		text-align: left;
+		bottom: 18px;
+		line-height: 16px;
+		letter-spacing: 0.015em;
+	}
 }
 
 .step-section__content__item--2{
 	background: url(../background/step1_bg_d.jpg) no-repeat;
+	h3{
+		left: 19px;
+    	bottom: 122px;
+	}
+	h2{
+		text-align: left;
+		left: 17px;
+    	bottom: 79px;
+	}
+	p{
+		text-align: left;
+		bottom: 18px;
+		left: 17px;
+		line-height: 16px;
+		letter-spacing: 0.015em;
+	}
 }
 
 .step-section__content__item--3{
 	background: url(../background/step2_bg_d.jpg) no-repeat;
+	h3{
+		left: 18px;
+    	bottom: 152px;
+	}
+	h2{
+		text-align: left;
+		left: 16px;
+	}
+	p{
+		text-align: left;
+		left: 17px;
+		bottom: 18px;
+		line-height: 16px;
+		letter-spacing: 0.015em;
+	}
 }
 
 .partners-section__content{
@@ -839,7 +933,7 @@ body{
 
 .partners-section__content__item{
 	height: 100%;
-	margin-bottom: 0px;
+	margin-bottom: -3px;
 }
 
 .partner-section__link{
@@ -847,7 +941,11 @@ body{
 }
 
 .idea-section{
-	margin: 13px 0 0 0;
+	height: 1148px;
+}
+
+.idea__section__header{
+	margin: -259px 0 21px 0;
 }
 
 
@@ -865,7 +963,7 @@ body{
 
 
 .section__header--second{
-	margin: 101px 0 34px 0;
+	margin: 93px 0 32px 0;
 }
 
 #queryBlock{
@@ -873,6 +971,9 @@ body{
 	height: 985px;
 }
 
+.idea-section-search-header {
+    margin: 3px auto;
+}
 
 #interests-search_field,
 #interests-search_btn{
