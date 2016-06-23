@@ -122,7 +122,7 @@ var queries = ['Sports and Activity', 'Welness and Health', 'Extreme Sports and 
 		$.getJSON('https://pixabay.com/api/?key=2799655-a46e55bb99fc16063276b4cfb&q=' + el + '&image_type=photo', function(r){
 				//console.log(r)
 				if (!(r.hits.length)) {
-					$block.eq(i).css('background-image', 'url(' + 'background/idea_bg_' + i + '.jpg' + ')')
+					$block.eq(i).css('background-image', 'url(' + 'background/idea_bg_' + ( 7 * Math.random() >> 0 ) + '.jpg' + ')')
 							.html('<span>NO RESULTS</span>')
 							return;
 				} ;
