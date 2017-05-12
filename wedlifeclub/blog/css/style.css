@@ -1,0 +1,34 @@
+article{
+	padding-top: 20px;
+	padding-left: 50px;
+	margin: 10px;
+	font-family: 'RalewayBold', sans-serif;
+	color: #d64141;
+	border-radius: 20px;
+	border: 2px solid #d64141;
+	border-color:  ;
+
+}
+
+.blogHeader{
+	font-weight: bold;
+	font-size: 75px;
+	margin: -20px 0 0 -10px;
+	
+
+}
+.blogAuthor{
+	font-size: 50px;
+
+}
+.blogDate{
+	font-size: 30px;
+	float: right;
+	margin: -115px 25px 0 0;
+
+}
+.blogText{
+	font-size: 30px;
+
+
+}
